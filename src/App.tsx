@@ -5,7 +5,7 @@ import Feedback from "./pages/Feedback";
 
 export default function App() {
   function randomNum() {
-    const arr: any = [];
+    const arr: number[] = [];
     while (arr.length < 5) {
       var r = Math.floor(Math.random() * 20);
       if (arr.indexOf(r) === -1) arr.push(r);

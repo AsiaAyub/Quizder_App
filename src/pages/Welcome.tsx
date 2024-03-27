@@ -22,7 +22,7 @@ const Welcome = () => {
           </p>
           <div className="flex justify-end">
             <button
-              className="bg-cyan-400 w-32 h-10 rounded-full my-9 "
+              className="bg-cyan-400 w-32 h-10 rounded-full my-9 hover:bg-blue-900"
               onClick={nextPage}
             >
               Get Started

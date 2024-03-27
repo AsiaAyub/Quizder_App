@@ -9,7 +9,7 @@ import Question5 from "./Question5";
 import { useNavigate } from "react-router";
 
 type questionDisplayProps = {
-  randomNumbers: any;
+  randomNumbers: number[];
 };
 
 type FormData = {
@@ -67,9 +67,6 @@ const QuestionsDisplay = ({ randomNumbers }: questionDisplayProps) => {
       />,
     ]);
 
-  {
-  }
-
   const navigate = useNavigate();
 
   const nextPage = () => {
@@ -94,7 +91,7 @@ const QuestionsDisplay = ({ randomNumbers }: questionDisplayProps) => {
             {!isFirstStep && (
               <button
                 type="button"
-                className="bg-cyan-800 text-white p-2 rounded-md w-32 "
+                className="bg-cyan-800 hover:bg-teal-900 text-white p-2 rounded-md w-32 "
                 onClick={prevQs}
               >
                 Back
@@ -103,7 +100,7 @@ const QuestionsDisplay = ({ randomNumbers }: questionDisplayProps) => {
 
             <button
               type="submit"
-              className="bg-cyan-800 text-white p-2 rounded-md mx-3 w-32 "
+              className="bg-cyan-800 hover:bg-teal-900 text-white p-2 rounded-md mx-3 w-32 "
             >
               {isLastStep ? "Finish" : "Next"}
             </button>

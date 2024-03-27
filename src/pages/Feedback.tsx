@@ -8,7 +8,7 @@ const Feedback = () => {
   const receivedData = location.state?.data;
   const questionList = receivedData?.qsList;
   const answersList = receivedData?.givenAnswers;
-  const givenAnswersArr: any = [];
+  const givenAnswersArr: string[] = [];
   var score = 0;
   var counter = 0;
 
@@ -17,7 +17,7 @@ const Feedback = () => {
     givenAnswersArr.push(value);
   }
 
-  questionList.forEach(function (value: any) {
+  questionList.forEach(function (value: number) {
     Riddles[value].correct === givenAnswersArr[counter]
       ? (score = score + 1)
       : console.log("");
